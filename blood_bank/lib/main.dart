@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 void main() {
   String name = "Sneha";
@@ -6,10 +7,14 @@ void main() {
   int b = 89;
   int sum = add(a, b);
   runApp(
-    MaterialApp(
+    const MaterialApp(
       home: Scaffold(
+        backgroundColor: Color.fromARGB(255, 9, 37, 61),
         body: Center(
-          child: Text("Hello World $sum $name"),
+          child: Text(
+            "Hello World ",
+            style: TextStyle(color: Colors.white, fontSize: 28),
+          ),
         ),
       ),
     ),
